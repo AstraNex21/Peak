@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-import ContactForm from './ContactForm';
+import ClientLogos from './ClientLogos';
 
 const Footer = () => {
   return (
@@ -78,13 +78,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Contact Form Section */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold text-center mb-6">Get In Touch</h3>
-            <ContactForm />
-          </div>
-        </div>
+        {/* Client Logos Section */}
+        <ClientLogos />
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
