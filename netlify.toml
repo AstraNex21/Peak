@@ -1,0 +1,41 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Form settings
+[forms]
+  # Enable form detection
+  [forms.contact]
+    # Send notifications to company email
+    [forms.contact.settings]
+      to = "Admin@peakelevatorgroup.com"
+      subject = "New Contact Form Submission - Peak Elevator Group"
+      
+# Email notifications
+[[plugins]]
+  package = "@netlify/plugin-emails"
+  
+  [plugins.inputs]
+    # Email template for form submissions
+    from = "noreply@netlify.com"
+    to = "Admin@peakelevatorgroup.com"
+    subject = "New Contact Form Submission"
+    html = """
+    <h2>New Contact Form Submission</h2>
+    <p><strong>Name:</strong> {{name}}</p>
+    <p><strong>Email:</strong> {{email}}</p>
+    <p><strong>Phone:</strong> {{phone}}</p>
+    <p><strong>Service Interest:</strong> {{service}}</p>
+    <p><strong>Message:</strong></p>
+    <p>{{message}}</p>
+    <hr>
+    <p><em>This message was sent from the Peak Elevator Group website contact form.</em></p>
+    """
