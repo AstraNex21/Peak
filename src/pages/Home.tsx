@@ -27,7 +27,7 @@ const Home = () => {
       title: 'Car Lift Solutions',
       description: 'Specialized automotive lifting systems for parking and service applications.',
       link: '/car-lift',
-      image: '/shawn-5VQrZbBKMXw-unsplash.jpg'
+      image: '/pexels-artempodrez-8986032.jpg'
     }
   ];
 
