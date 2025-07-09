@@ -37,7 +37,15 @@ const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-800 to-green-900 text-white py-20">
+      <section className="relative bg-gradient-to-br from-slate-900 via-green-900 to-emerald-800 text-white py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-15"
+          style={{
+            backgroundImage: 'url(/pexels-cottonbro-8453045.jpg)',
+            backgroundBlendMode: 'overlay'
+          }}
+        ></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -74,7 +82,7 @@ const About = () => {
                 <span>Serving Delhi/NCR with Excellence</span>
               </div>
             </div>
-            <div className="bg-gray-100 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-2xl shadow-lg border border-blue-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Expertise</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
@@ -112,7 +120,15 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-green-600">
+      <section className="py-20 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-800/30 to-transparent"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{
+            backgroundImage: 'url(/pexels-artempodrez-8986145.jpg)',
+            backgroundBlendMode: 'overlay'
+          }}
+        ></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -138,7 +154,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -150,11 +166,11 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-xl shadow-lg">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="text-center p-8 bg-gradient-to-br from-white to-blue-50/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-100">
+                <div className="bg-gradient-to-br from-green-400 to-emerald-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <value.icon className="h-8 w-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">
                   {value.title}
                 </h3>
                 <p className="text-gray-600">
@@ -178,21 +194,21 @@ const About = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
+            <div className="text-center p-8 bg-gradient-to-br from-white to-green-50/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-green-100">
               <MapPin className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Delhi</h3>
               <p className="text-gray-600">
                 Complete coverage across all districts of Delhi including residential and commercial areas.
               </p>
             </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
+            <div className="text-center p-8 bg-gradient-to-br from-white to-blue-50/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-100">
               <MapPin className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Gurgaon</h3>
               <p className="text-gray-600">
                 Serving the rapidly growing commercial and residential sectors in Gurgaon.
               </p>
             </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
+            <div className="text-center p-8 bg-gradient-to-br from-white to-purple-50/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-purple-100">
               <MapPin className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Noida & Greater Noida</h3>
               <p className="text-gray-600">
@@ -204,7 +220,8 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-green-600">
+      <section className="py-20 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-800/30 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Work With Us?
@@ -215,14 +232,14 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
-              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center"
+              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Get Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a 
               href="tel:+919990858886" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Call: +91 9990858886
             </a>
@@ -231,7 +248,7 @@ const About = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16">
+      <section className="py-20 bg-gradient-to-br from-slate-100 via-gray-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -241,7 +258,7 @@ const About = () => {
               Have questions about our services? We'd love to hear from you.
             </p>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
+          <div className="bg-gradient-to-br from-white to-blue-50/30 p-10 rounded-2xl shadow-2xl border border-blue-100">
             <ContactForm />
           </div>
         </div>

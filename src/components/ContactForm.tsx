@@ -56,13 +56,13 @@ const ContactForm = () => {
   return (
     <div>
       {submitStatus === 'success' && (
-        <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+        <div className="mb-6 p-6 bg-gradient-to-r from-green-100 to-emerald-100 border border-green-300 text-green-800 rounded-xl shadow-lg">
           Thank you for your message! We'll get back to you within 24 hours.
         </div>
       )}
       
       {submitStatus === 'error' && (
-        <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+        <div className="mb-6 p-6 bg-gradient-to-r from-red-100 to-rose-100 border border-red-300 text-red-800 rounded-xl shadow-lg">
           There was an error sending your message. Please try again or call us directly at +91 9990858886.
         </div>
       )}
@@ -89,7 +89,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               disabled={isSubmitting}
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 disabled:opacity-50"
+              className="w-full px-4 py-3 bg-gradient-to-r from-gray-800 to-slate-800 border border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 disabled:opacity-50 shadow-lg"
             />
           </div>
           <div>
@@ -101,7 +101,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               disabled={isSubmitting}
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 disabled:opacity-50"
+              className="w-full px-4 py-3 bg-gradient-to-r from-gray-800 to-slate-800 border border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 disabled:opacity-50 shadow-lg"
             />
           </div>
         </div>
@@ -115,7 +115,7 @@ const ContactForm = () => {
               value={formData.phone}
               onChange={handleChange}
               disabled={isSubmitting}
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 disabled:opacity-50"
+              className="w-full px-4 py-3 bg-gradient-to-r from-gray-800 to-slate-800 border border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 disabled:opacity-50 shadow-lg"
             />
           </div>
           <div>
@@ -124,7 +124,7 @@ const ContactForm = () => {
               value={formData.service}
               onChange={handleChange}
               disabled={isSubmitting}
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-white disabled:opacity-50"
+              className="w-full px-4 py-3 bg-gradient-to-r from-gray-800 to-slate-800 border border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-white disabled:opacity-50 shadow-lg"
             >
               <option value="">Select Service</option>
               <option value="Machine Room Lift">Machine Room Lift</option>
@@ -150,14 +150,14 @@ const ContactForm = () => {
             required
             disabled={isSubmitting}
             rows={4}
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 resize-none disabled:opacity-50"
+            className="w-full px-4 py-3 bg-gradient-to-r from-gray-800 to-slate-800 border border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 resize-none disabled:opacity-50 shadow-lg"
           ></textarea>
         </div>
         
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-4 rounded-xl font-medium hover:from-green-700 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105"
         >
           {isSubmitting ? (
             <>

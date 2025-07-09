@@ -6,7 +6,15 @@ const Contact = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-800 to-green-900 text-white py-20">
+      <section className="relative bg-gradient-to-br from-slate-900 via-green-900 to-emerald-800 text-white py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-15"
+          style={{
+            backgroundImage: 'url(/pexels-cottonbro-8453040.jpg)',
+            backgroundBlendMode: 'overlay'
+          }}
+        ></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -17,7 +25,7 @@ const Contact = () => {
             </p>
             <a 
               href="tel:+919990858886" 
-              className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
+              className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Call Now: +91 9990858886
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -27,7 +35,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Details */}
@@ -88,7 +96,7 @@ const Contact = () => {
               </div>
               
               {/* Service Areas */}
-              <div className="mt-8 p-6 bg-gray-50 rounded-xl">
+              <div className="mt-8 p-6 bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl shadow-lg border border-green-100">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Service Areas</h3>
                 <div className="grid grid-cols-2 gap-4 text-gray-600">
                   <div>
@@ -107,7 +115,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div>
-              <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="bg-gradient-to-br from-white to-blue-50/30 p-10 rounded-2xl shadow-2xl border border-blue-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
                 <ContactForm />
               </div>
@@ -117,7 +125,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -129,7 +137,7 @@ const Contact = () => {
           </div>
           
           {/* Map Placeholder */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-2xl shadow-2xl overflow-hidden border border-blue-100">
             <div className="h-96 bg-gray-200 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-12 w-12 text-green-600 mx-auto mb-4" />
@@ -153,7 +161,8 @@ const Contact = () => {
       </section>
 
       {/* Emergency Contact */}
-      <section className="py-16 bg-red-600">
+      <section className="py-20 bg-gradient-to-br from-red-600 via-rose-600 to-pink-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-800/30 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Emergency Elevator Service
@@ -163,7 +172,7 @@ const Contact = () => {
           </p>
           <a 
             href="tel:+919990858886" 
-            className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-flex items-center text-xl"
+            className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-all duration-300 inline-flex items-center text-xl shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Emergency: +91 9990858886
             <Phone className="ml-2 h-6 w-6" />
@@ -175,7 +184,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16">
+      <section className="py-20 bg-gradient-to-br from-slate-100 via-gray-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -187,7 +196,7 @@ const Contact = () => {
           </div>
           
           <div className="space-y-6">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-gradient-to-br from-white to-blue-50/30 p-8 rounded-2xl shadow-xl border border-blue-100">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 How quickly can you respond to emergency calls?
               </h3>
@@ -196,7 +205,7 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-gradient-to-br from-white to-green-50/30 p-8 rounded-2xl shadow-xl border border-green-100">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Do you provide AMC services for elevators installed by other companies?
               </h3>
@@ -205,7 +214,7 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-gradient-to-br from-white to-purple-50/30 p-8 rounded-2xl shadow-xl border border-purple-100">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 What is the typical installation time for a new elevator?
               </h3>
@@ -214,7 +223,7 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-gradient-to-br from-white to-indigo-50/30 p-8 rounded-2xl shadow-xl border border-indigo-100">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Do you offer financing options for elevator installations?
               </h3>

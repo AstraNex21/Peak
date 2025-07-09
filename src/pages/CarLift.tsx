@@ -27,7 +27,15 @@ const CarLift = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-800 to-green-900 text-white py-20">
+      <section className="relative bg-gradient-to-br from-slate-900 via-green-900 to-emerald-800 text-white py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{
+            backgroundImage: 'url(/pexels-artempodrez-8986145.jpg)',
+            backgroundBlendMode: 'overlay'
+          }}
+        ></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -38,7 +46,7 @@ const CarLift = () => {
             </p>
             <Link 
               to="/contact" 
-              className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
+              className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Get Quote
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -75,7 +83,7 @@ const CarLift = () => {
                 <span>Maximum Safety Standards</span>
               </div>
             </div>
-            <div className="bg-gray-100 p-8 rounded-xl">
+            <div className="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-2xl shadow-lg border border-blue-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Advantages</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
@@ -106,7 +114,7 @@ const CarLift = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -118,7 +126,7 @@ const CarLift = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-center p-4 bg-white rounded-lg shadow">
+              <div key={index} className="flex items-center p-6 bg-gradient-to-br from-white to-blue-50/50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
                 <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
                 <span className="text-gray-700">{feature}</span>
               </div>
@@ -139,8 +147,8 @@ const CarLift = () => {
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-green-600 text-white p-6">
+            <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-2xl shadow-2xl overflow-hidden border border-blue-100">
+              <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-6">
                 <h3 className="text-xl font-semibold">Car Lift Specifications</h3>
               </div>
               <div className="p-6">
@@ -159,7 +167,7 @@ const CarLift = () => {
       </section>
 
       {/* Applications Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -170,21 +178,21 @@ const CarLift = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
+            <div className="text-center p-8 bg-gradient-to-br from-white to-blue-50/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-100">
               <Car className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Service Centers</h3>
               <p className="text-gray-600">
                 Automotive repair shops and service centers for vehicle maintenance and repairs.
               </p>
             </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
+            <div className="text-center p-8 bg-gradient-to-br from-white to-green-50/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-green-100">
               <Settings className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Parking Facilities</h3>
               <p className="text-gray-600">
                 Multi-level parking solutions for residential and commercial properties.
               </p>
             </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
+            <div className="text-center p-8 bg-gradient-to-br from-white to-purple-50/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-purple-100">
               <Wrench className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Private Garages</h3>
               <p className="text-gray-600">
@@ -196,7 +204,8 @@ const CarLift = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-green-600">
+      <section className="py-20 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-800/30 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Need a Car Lift Solution?
@@ -207,14 +216,14 @@ const CarLift = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
-              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center"
+              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Get Free Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a 
               href="tel:+919990858886" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Call: +91 9990858886
             </a>
@@ -223,7 +232,7 @@ const CarLift = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16">
+      <section className="py-20 bg-gradient-to-br from-slate-100 via-gray-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -233,7 +242,7 @@ const CarLift = () => {
               Get detailed information about our Car Lift solutions
             </p>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
+          <div className="bg-gradient-to-br from-white to-blue-50/30 p-10 rounded-2xl shadow-2xl border border-blue-100">
             <ContactForm />
           </div>
         </div>
