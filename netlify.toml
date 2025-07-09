@@ -9,16 +9,3 @@
 
 [build.environment]
   NODE_VERSION = "18"
-
-# Form settings
-[forms]
-  # Enable form detection
-  [forms.contact]
-    # Send notifications to company email
-    [forms.contact.settings]
-      to = "Admin@peakelevatorgroup.com"
-      subject = "New Contact Form Submission - Peak Elevator Group"
-      
-# Email notifications
-[[plugins]]
-  package = "@netlify/plugin-emails"

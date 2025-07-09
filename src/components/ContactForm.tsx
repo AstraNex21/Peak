@@ -25,13 +25,13 @@ const ContactForm = () => {
     setSubmitStatus('idle');
 
     try {
+      const formElement = e.target as HTMLFormElement;
+      const formDataObj = new FormData(formElement);
+      
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'contact',
-          ...formData
-        }).toString()
+        body: new URLSearchParams(formDataObj as any).toString()
       });
 
       if (response.ok) {
@@ -89,7 +89,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               disabled={isSubmitting}
-              className="w-full px-4 py-3 bg-gradient-to-r from-gray-800 to-slate-800 border border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 disabled:opacity-50 shadow-lg"
+              className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 text-gray-900 placeholder-gray-500 disabled:opacity-50 shadow-lg transition-all duration-300"
             />
           </div>
           <div>
@@ -101,7 +101,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               disabled={isSubmitting}
-              className="w-full px-4 py-3 bg-gradient-to-r from-gray-800 to-slate-800 border border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 disabled:opacity-50 shadow-lg"
+              className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 text-gray-900 placeholder-gray-500 disabled:opacity-50 shadow-lg transition-all duration-300"
             />
           </div>
         </div>
@@ -115,7 +115,7 @@ const ContactForm = () => {
               value={formData.phone}
               onChange={handleChange}
               disabled={isSubmitting}
-              className="w-full px-4 py-3 bg-gradient-to-r from-gray-800 to-slate-800 border border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 disabled:opacity-50 shadow-lg"
+              className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 text-gray-900 placeholder-gray-500 disabled:opacity-50 shadow-lg transition-all duration-300"
             />
           </div>
           <div>
@@ -124,19 +124,19 @@ const ContactForm = () => {
               value={formData.service}
               onChange={handleChange}
               disabled={isSubmitting}
-              className="w-full px-4 py-3 bg-gradient-to-r from-gray-800 to-slate-800 border border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-white disabled:opacity-50 shadow-lg"
+              className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 text-gray-900 disabled:opacity-50 shadow-lg transition-all duration-300"
             >
-              <option value="">Select Service</option>
-              <option value="Machine Room Lift">Machine Room Lift</option>
-              <option value="Machine Room Less Lift">Machine Room Less Lift</option>
-              <option value="Hydraulic Passenger Lift">Hydraulic Passenger Lift</option>
-              <option value="Hydraulic Goods Lift">Hydraulic Goods Lift</option>
-              <option value="Car Lift">Car Lift</option>
-              <option value="Car Parking Stacker">Car Parking Stacker</option>
-              <option value="Lift Modernisation">Lift Modernisation</option>
-              <option value="AMC Services">AMC Services</option>
-              <option value="Emergency Repair">Emergency Repair</option>
-              <option value="General Inquiry">General Inquiry</option>
+              <option value="" className="text-gray-500">Select Service</option>
+              <option value="Machine Room Lift" className="text-gray-900">Machine Room Lift</option>
+              <option value="Machine Room Less Lift" className="text-gray-900">Machine Room Less Lift</option>
+              <option value="Hydraulic Passenger Lift" className="text-gray-900">Hydraulic Passenger Lift</option>
+              <option value="Hydraulic Goods Lift" className="text-gray-900">Hydraulic Goods Lift</option>
+              <option value="Car Lift" className="text-gray-900">Car Lift</option>
+              <option value="Car Parking Stacker" className="text-gray-900">Car Parking Stacker</option>
+              <option value="Lift Modernisation" className="text-gray-900">Lift Modernisation</option>
+              <option value="AMC Services" className="text-gray-900">AMC Services</option>
+              <option value="Emergency Repair" className="text-gray-900">Emergency Repair</option>
+              <option value="General Inquiry" className="text-gray-900">General Inquiry</option>
             </select>
           </div>
         </div>
@@ -150,7 +150,7 @@ const ContactForm = () => {
             required
             disabled={isSubmitting}
             rows={4}
-            className="w-full px-4 py-3 bg-gradient-to-r from-gray-800 to-slate-800 border border-gray-600 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400 resize-none disabled:opacity-50 shadow-lg"
+            className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 text-gray-900 placeholder-gray-500 resize-none disabled:opacity-50 shadow-lg transition-all duration-300"
           ></textarea>
         </div>
         
