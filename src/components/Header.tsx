@@ -104,7 +104,7 @@ const Header = () => {
               to="/contact" 
               className="bg-green-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors"
             >
-              Get Quote
+              Book Free Site Visit
             </Link>
           </nav>
 
