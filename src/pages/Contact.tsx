@@ -35,7 +35,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-green-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Details */}
@@ -115,7 +115,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div>
-              <div className="bg-gradient-to-br from-white to-blue-50/30 p-10 rounded-2xl shadow-2xl border border-blue-100">
+              <div className="bg-gradient-to-br from-white to-blue-50/50 p-10 rounded-2xl shadow-2xl border border-blue-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
                 <ContactForm />
               </div>
@@ -125,7 +125,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-slate-50 to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -137,7 +137,7 @@ const Contact = () => {
           </div>
           
           {/* Map Placeholder */}
-          <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-2xl shadow-2xl overflow-hidden border border-blue-100">
+          <div className="bg-gradient-to-br from-white to-blue-50/50 rounded-2xl shadow-2xl overflow-hidden border border-blue-100">
             <div className="h-96 bg-gray-200 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-12 w-12 text-green-600 mx-auto mb-4" />
@@ -184,7 +184,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-100 via-gray-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -196,7 +196,7 @@ const Contact = () => {
           </div>
           
           <div className="space-y-6">
-            <div className="bg-gradient-to-br from-white to-blue-50/30 p-8 rounded-2xl shadow-xl border border-blue-100">
+            <div className="bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-2xl shadow-xl border border-blue-100">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 How quickly can you respond to emergency calls?
               </h3>
@@ -205,7 +205,7 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-white to-green-50/30 p-8 rounded-2xl shadow-xl border border-green-100">
+            <div className="bg-gradient-to-br from-white to-green-50/50 p-8 rounded-2xl shadow-xl border border-green-100">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Do you provide AMC services for elevators installed by other companies?
               </h3>
@@ -214,7 +214,7 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-white to-purple-50/30 p-8 rounded-2xl shadow-xl border border-purple-100">
+            <div className="bg-gradient-to-br from-white to-slate-50/50 p-8 rounded-2xl shadow-xl border border-slate-100">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 What is the typical installation time for a new elevator?
               </h3>
@@ -223,7 +223,7 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-white to-indigo-50/30 p-8 rounded-2xl shadow-xl border border-indigo-100">
+            <div className="bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-2xl shadow-xl border border-blue-100">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Do you offer financing options for elevator installations?
               </h3>

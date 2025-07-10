@@ -28,7 +28,7 @@ const ClientLogos = () => {
   const duplicatedClients = [...clients, ...clients, ...clients];
 
   return (
-    <div className="py-20 bg-gradient-to-br from-slate-100 via-gray-50 to-blue-50 overflow-hidden">
+    <div className="py-16 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -42,8 +42,8 @@ const ClientLogos = () => {
         {/* Moving logos container */}
         <div className="relative">
           {/* Gradient overlays for smooth fade effect */}
-          <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-slate-100 to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-slate-100 to-transparent z-10"></div>
+          <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-slate-50 to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-slate-50 to-transparent z-10"></div>
           
           {/* Scrolling logos */}
           <div className="flex animate-scroll">
@@ -65,7 +65,7 @@ const ClientLogos = () => {
 
         {/* Client testimonial highlight */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-br from-white to-blue-50/30 p-8 rounded-2xl shadow-xl border border-blue-100 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-2xl shadow-xl border border-blue-100 max-w-4xl mx-auto">
             <blockquote className="text-lg italic text-gray-700 mb-4">
               "Peak Elevator Group has consistently delivered exceptional elevator solutions for our properties. 
               Their professionalism, reliability, and commitment to safety make them our preferred partner."

@@ -154,7 +154,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -166,7 +166,7 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-8 bg-gradient-to-br from-white to-blue-50/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-100">
+              <div key={index} className="text-center p-8 bg-gradient-to-br from-white to-blue-50/30 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-100">
                 <div className="bg-gradient-to-br from-green-400 to-emerald-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <value.icon className="h-8 w-8 text-green-600" />
                 </div>
@@ -248,7 +248,7 @@ const About = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-100 via-gray-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -258,7 +258,7 @@ const About = () => {
               Have questions about our services? We'd love to hear from you.
             </p>
           </div>
-          <div className="bg-gradient-to-br from-white to-blue-50/30 p-10 rounded-2xl shadow-2xl border border-blue-100">
+          <div className="bg-gradient-to-br from-white to-blue-50/50 p-10 rounded-2xl shadow-2xl border border-blue-100">
             <ContactForm />
           </div>
         </div>

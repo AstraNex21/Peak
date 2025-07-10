@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Clock, Users, Star, CheckCircle } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+import TestimonialsSlider from '../components/TestimonialsSlider';
 
 const Home = () => {
   const services = [
@@ -96,7 +97,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-green-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -121,7 +122,7 @@ const Home = () => {
             </div>
             
             <div className="text-center p-8 bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-100 transform hover:scale-105">
-              <div className="bg-gradient-to-br from-blue-400 to-cyan-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Clock className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-4 text-gray-800">24/7 Support</h3>
@@ -131,8 +132,8 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="text-center p-8 bg-gradient-to-br from-white to-purple-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-purple-100 transform hover:scale-105">
-              <div className="bg-gradient-to-br from-purple-400 to-indigo-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="text-center p-8 bg-gradient-to-br from-white to-slate-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 transform hover:scale-105">
+              <div className="bg-gradient-to-br from-slate-500 to-gray-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <Users className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-4 text-gray-800">Expert Team</h3>
@@ -206,7 +207,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-slate-50 via-blue-50 to-green-50 relative overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-5"
           style={{
@@ -224,24 +225,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-100 transform hover:scale-105">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-600 mb-4 italic">
-                  "{testimonial.text}"
-                </p>
-                <div>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-500">{testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TestimonialsSlider testimonials={testimonials} />
           
           <div className="text-center mt-12">
             <Link 
@@ -291,7 +275,7 @@ const Home = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-100 via-gray-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -301,7 +285,7 @@ const Home = () => {
               Send us a message and we'll get back to you within 24 hours.
             </p>
           </div>
-          <div className="bg-gradient-to-br from-white to-blue-50/30 p-10 rounded-2xl shadow-2xl border border-blue-100">
+          <div className="bg-gradient-to-br from-white to-blue-50/50 p-10 rounded-2xl shadow-2xl border border-blue-100">
             <ContactForm />
           </div>
         </div>
