@@ -241,7 +241,7 @@ const LiftModernisation = () => {
               to="/contact" 
               className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center justify-center"
             >
-              Get Free Assessment
+              Book Free Technical Visit
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a 
