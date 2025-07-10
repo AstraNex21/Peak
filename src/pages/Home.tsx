@@ -81,7 +81,7 @@ const Home = () => {
                 to="/contact" 
                 className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-all duration-300 inline-flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-105"
               >
-                Get Free Quote
+                Book Free Site Visit
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a 
