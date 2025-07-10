@@ -206,17 +206,27 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Contact Form Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get In Touch
+            </h2>
+            <p className="text-lg text-gray-600">
+              Send us a message and we'll get back to you within 24 hours.
+            </p>
+          </div>
+          <div className="bg-gradient-to-br from-white to-blue-50/50 p-10 rounded-2xl shadow-2xl border border-blue-100">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
-      <section className="py-12 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50 relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-5"
-          style={{
-            backgroundImage: 'url(/jason-song-ZWqrfoLJ5Vc-unsplash.jpg)',
-            backgroundBlendMode: 'overlay'
-          }}
-        ></div>
+      <section className="py-16 bg-gradient-to-br from-white via-slate-50 to-gray-100 relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What Our Clients Say
             </h2>
@@ -226,7 +236,22 @@ const Home = () => {
           </div>
           
           <TestimonialsSlider testimonials={testimonials} />
+          
+          <div className="text-center mt-8">
+            <Link 
+              to="/testimonials" 
+              className="text-green-600 font-semibold hover:text-green-700 inline-flex items-center transition-colors duration-300"
+            >
+              Read More Testimonials
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
         </div>
+      </section>
+
+      {/* Client Logos Section */}
+      <section className="border-t border-gray-200">
+        <ClientLogos />
       </section>
 
       {/* CTA Section */}
@@ -260,23 +285,6 @@ const Home = () => {
             >
               Call: +91 9990858886
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Get In Touch
-            </h2>
-            <p className="text-lg text-gray-600">
-              Send us a message and we'll get back to you within 24 hours.
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-white to-blue-50/50 p-10 rounded-2xl shadow-2xl border border-blue-100">
-            <ContactForm />
           </div>
         </div>
       </section>
