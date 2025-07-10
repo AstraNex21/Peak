@@ -41,11 +41,20 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
+              <li><Link to="/lift-modernisation" className="text-gray-300 hover:text-white transition-colors">Lift Modernisation</Link></li>
+              <li><Link to="/amc" className="text-gray-300 hover:text-white transition-colors">AMC Services</Link></li>
+            </ul>
+          </div>
+
+          {/* Products */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Our Products</h3>
+            <ul className="space-y-2">
               <li><Link to="/machine-room-lift" className="text-gray-300 hover:text-white transition-colors">Machine Room Lift</Link></li>
               <li><Link to="/machine-room-less-lift" className="text-gray-300 hover:text-white transition-colors">Machine Room Less Lift</Link></li>
               <li><Link to="/hydraulic-passenger-lift" className="text-gray-300 hover:text-white transition-colors">Hydraulic Passenger Lift</Link></li>
               <li><Link to="/car-lift" className="text-gray-300 hover:text-white transition-colors">Car Lift</Link></li>
-              <li><Link to="/lift-modernisation" className="text-gray-300 hover:text-white transition-colors">Lift Modernisation</Link></li>
+              <li><Link to="/car-parking-stacker" className="text-gray-300 hover:text-white transition-colors">Car Parking Stacker</Link></li>
             </ul>
           </div>
 

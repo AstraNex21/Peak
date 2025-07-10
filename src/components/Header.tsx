@@ -5,19 +5,23 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
 
   const services = [
+    { name: 'Lift Modernisation', path: '/lift-modernisation' },
+    { name: 'AMC Services', path: '/amc' },
+  ];
+
+  const products = [
     { name: 'Machine Room Lift', path: '/machine-room-lift' },
     { name: 'Machine Room Less Lift', path: '/machine-room-less-lift' },
     { name: 'Hydraulic Passenger Lift', path: '/hydraulic-passenger-lift' },
     { name: 'Hydraulic Goods Lift', path: '/hydraulic-goods-lift' },
     { name: 'Car Lift', path: '/car-lift' },
     { name: 'Car Parking Stacker', path: '/car-parking-stacker' },
-    { name: 'Lift Modernisation', path: '/lift-modernisation' },
-    { name: 'AMC Services', path: '/amc' },
   ];
 
   return (
@@ -65,7 +69,7 @@ const Header = () => {
               
               {isServicesOpen && (
                 <div 
-                  className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                  className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
@@ -77,6 +81,37 @@ const Header = () => {
                       onClick={() => setIsServicesOpen(false)}
                     >
                       {service.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Products Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsProductsOpen(!isProductsOpen)}
+                onMouseEnter={() => setIsProductsOpen(true)}
+                className="flex items-center font-medium text-gray-700 hover:text-green-700 transition-colors"
+              >
+                Products
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              
+              {isProductsOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                  onMouseEnter={() => setIsProductsOpen(true)}
+                  onMouseLeave={() => setIsProductsOpen(false)}
+                >
+                  {products.map((product) => (
+                    <Link
+                      key={product.path}
+                      to={product.path}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors"
+                      onClick={() => setIsProductsOpen(false)}
+                    >
+                      {product.name}
                     </Link>
                   ))}
                 </div>
@@ -147,6 +182,22 @@ const Header = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <div className="font-medium text-gray-700">Products</div>
+                <div className="pl-4 space-y-2">
+                  {products.map((product) => (
+                    <Link
+                      key={product.path}
+                      to={product.path}
+                      className="block text-sm text-gray-600 hover:text-green-700 transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {product.name}
                     </Link>
                   ))}
                 </div>
