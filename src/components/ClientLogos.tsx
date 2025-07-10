@@ -28,35 +28,35 @@ const ClientLogos = () => {
   const duplicatedClients = [...clients, ...clients, ...clients];
 
   return (
-    <div className="py-8 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+    <div className="py-4 bg-gradient-to-br from-slate-100 via-gray-100 to-slate-200 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-3">
+          <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-1">
             Trusted by Industry Leaders
           </h2>
-          <p className="text-base text-gray-600 max-w-xl mx-auto">
-            Peak Elevator Group proudly serves prestigious clients across various industries
+          <p className="text-sm text-gray-600 max-w-lg mx-auto">
+            Peak Elevator Group proudly serves prestigious clients
           </p>
         </div>
 
         {/* Moving logos container */}
         <div className="relative">
           {/* Gradient overlays for smooth fade effect */}
-          <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-slate-50 to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-slate-50 to-transparent z-10"></div>
+          <div className="absolute left-0 top-0 w-12 h-full bg-gradient-to-r from-slate-100 to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 w-12 h-full bg-gradient-to-l from-slate-100 to-transparent z-10"></div>
           
           {/* Scrolling logos */}
           <div className="flex animate-scroll">
             {duplicatedClients.map((client, index) => (
               <div
                 key={`${client.name}-${index}`}
-                className="flex-shrink-0 mx-6 flex items-center justify-center"
-                style={{ minWidth: '160px', height: '80px' }}
+                className="flex-shrink-0 mx-4 flex items-center justify-center"
+                style={{ minWidth: '120px', height: '50px' }}
               >
                 <img
                   src={client.logo}
                   alt={client.alt}
-                  className="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-90"
+                  className="max-h-8 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-50 hover:opacity-80"
                 />
               </div>
             ))}
@@ -64,33 +64,33 @@ const ClientLogos = () => {
         </div>
 
         {/* Client testimonial highlight */}
-        <div className="mt-8 text-center">
-          <div className="bg-gradient-to-br from-white to-slate-50/50 p-6 rounded-xl shadow-lg border border-slate-100 max-w-3xl mx-auto">
-            <blockquote className="text-base italic text-gray-700 mb-3">
-              "Peak Elevator Group has consistently delivered exceptional elevator solutions for our properties. 
-              Their professionalism, reliability, and commitment to safety make them our preferred partner."
+        <div className="mt-4 text-center">
+          <div className="bg-gradient-to-br from-slate-50 to-gray-100 p-4 rounded-lg shadow-md border border-slate-200 max-w-2xl mx-auto">
+            <blockquote className="text-sm italic text-gray-700 mb-2">
+              "Peak Elevator Group has consistently delivered exceptional elevator solutions. 
+              Their professionalism and commitment to safety make them our preferred partner."
             </blockquote>
-            <div className="text-green-600 font-medium text-sm">
+            <div className="text-green-600 font-medium text-xs">
               — Leading Hospitality & Commercial Partners
             </div>
           </div>
         </div>
 
         {/* Call to action */}
-        <div className="mt-6 text-center">
-          <p className="text-gray-600 mb-4 text-sm">
-            Join these industry leaders who trust Peak Elevator Group for their vertical transportation needs
+        <div className="mt-3 text-center">
+          <p className="text-gray-600 mb-3 text-xs">
+            Join these industry leaders who trust Peak Elevator Group
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-col sm:flex-row gap-2 justify-center">
             <a 
               href="/contact" 
-              className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-medium hover:from-green-700 hover:to-emerald-700 transition-all duration-300 inline-flex items-center justify-center shadow-md hover:shadow-lg transform hover:scale-105 text-sm"
+              className="bg-gradient-to-r from-green-600 to-emerald-600 text-slate-50 px-4 py-2 rounded-md font-medium hover:from-green-700 hover:to-emerald-700 transition-all duration-300 inline-flex items-center justify-center shadow-sm hover:shadow-md transform hover:scale-105 text-xs"
             >
               Become Our Next Success Story
             </a>
             <a 
               href="tel:+919990858886" 
-              className="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg font-medium hover:bg-green-600 hover:text-white transition-all duration-300 inline-flex items-center justify-center shadow-md hover:shadow-lg transform hover:scale-105 text-sm"
+              className="border border-green-600 text-green-600 px-4 py-2 rounded-md font-medium hover:bg-green-600 hover:text-slate-50 transition-all duration-300 inline-flex items-center justify-center shadow-sm hover:shadow-md transform hover:scale-105 text-xs"
             >
               Call: +91 9990858886
             </a>
