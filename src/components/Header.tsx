@@ -119,14 +119,6 @@ const Header = () => {
             </div>
 
             <Link 
-              to="/testimonials" 
-              className={`font-medium transition-colors ${
-                isActive('/testimonials') ? 'text-green-700' : 'text-gray-700 hover:text-green-700'
-              }`}
-            >
-              Testimonials
-            </Link>
-            <Link 
               to="/contact" 
               className={`font-medium transition-colors ${
                 isActive('/contact') ? 'text-green-700' : 'text-gray-700 hover:text-green-700'
@@ -203,13 +195,6 @@ const Header = () => {
                 </div>
               </div>
 
-              <Link 
-                to="/testimonials" 
-                className="font-medium text-gray-700 hover:text-green-700 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Testimonials
-              </Link>
               <Link 
                 to="/contact" 
                 className="font-medium text-gray-700 hover:text-green-700 transition-colors"
