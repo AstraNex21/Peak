@@ -59,8 +59,8 @@ const Header = () => {
             {/* Services Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
                 onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
                 className="flex items-center font-medium text-gray-700 hover:text-green-700 transition-colors"
               >
                 Services
@@ -90,8 +90,8 @@ const Header = () => {
             {/* Products Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setIsProductsOpen(!isProductsOpen)}
                 onMouseEnter={() => setIsProductsOpen(true)}
+                onMouseLeave={() => setIsProductsOpen(false)}
                 className="flex items-center font-medium text-gray-700 hover:text-green-700 transition-colors"
               >
                 Products
