@@ -48,7 +48,7 @@ const TestimonialsSlider: React.FC<TestimonialsSliderProps> = ({ testimonials })
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
       {/* Main testimonial display */}
-      <div className="bg-gradient-to-br from-white to-blue-50/30 p-8 md:p-12 rounded-2xl shadow-xl border border-blue-100 min-h-[280px] flex items-center">
+      <div className="bg-gradient-to-br from-white to-slate-50/50 p-6 md:p-8 rounded-2xl shadow-xl border border-slate-100 min-h-[200px] flex items-center">
         <div className="w-full text-center">
           {/* Stars */}
           <div className="flex justify-center items-center mb-6">
@@ -58,13 +58,13 @@ const TestimonialsSlider: React.FC<TestimonialsSliderProps> = ({ testimonials })
           </div>
           
           {/* Quote */}
-          <blockquote className="text-lg md:text-xl text-gray-700 mb-6 italic leading-relaxed">
+          <blockquote className="text-base md:text-lg text-gray-700 mb-4 italic leading-relaxed">
             "{testimonials[currentIndex].text}"
           </blockquote>
           
           {/* Author */}
           <div>
-            <p className="font-semibold text-gray-900 text-lg">
+            <p className="font-semibold text-gray-900 text-base">
               {testimonials[currentIndex].name}
             </p>
             <p className="text-green-600 font-medium">
@@ -92,7 +92,7 @@ const TestimonialsSlider: React.FC<TestimonialsSliderProps> = ({ testimonials })
       </button>
 
       {/* Dots indicator */}
-      <div className="flex justify-center mt-8 space-x-3">
+      <div className="flex justify-center mt-6 space-x-3">
         {testimonials.map((_, index) => (
           <button
             key={index}
@@ -108,7 +108,7 @@ const TestimonialsSlider: React.FC<TestimonialsSliderProps> = ({ testimonials })
       </div>
 
       {/* Progress bar */}
-      <div className="mt-4 w-full bg-gray-200 rounded-full h-1">
+      <div className="mt-3 w-full bg-gray-200 rounded-full h-1">
         <div 
           className="bg-gradient-to-r from-green-500 to-emerald-500 h-1 rounded-full transition-all duration-300"
           style={{ width: `${((currentIndex + 1) / testimonials.length) * 100}%` }}
